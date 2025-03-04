@@ -98,7 +98,6 @@ def payment_success(request):
         payment.save()
         return render(request, "failure.html", {"error": "Payment verification failed!"})
 
-
 @csrf_exempt
 def payment_failure(request):
     """Handle payment failure callback."""
